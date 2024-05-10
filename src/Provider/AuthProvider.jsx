@@ -9,6 +9,7 @@ const auth =  getAuth(app);
 const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -29,6 +30,10 @@ const AuthProvider = ({children}) => {
     return signOut(auth);
   }
 
+  const changeTheme = () => {
+    setDarkTheme(!darkTheme);
+  }
+
   useEffect(()=> {
     const unSubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
@@ -45,7 +50,9 @@ const AuthProvider = ({children}) => {
     createUser,
     emailPasswordLogin,
     googleLogin,
-    logOutUser
+    logOutUser,
+    changeTheme,
+    darkTheme,
   }
 
   return(

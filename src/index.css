@@ -5,9 +5,10 @@
 
 :root {
   --clr-primary:#7C3AED;
+
   --clr-light-gray: #f5f4f5;
 
-  --bg-dark-primary: #1b1b28;
+  --clr-dark-gray: #1b1b28;
 }
 
 :root {
@@ -19,13 +20,21 @@
 }
 
 body {
+  background-color: white;
   font-family: var(--font-primary);
-  color: var(--clr-dark-primary);
+  color: var(--clr-dark-gray);
   font-size: 0.875rem;
   line-height: 1.6;
   max-width: 1920px;
   margin: 0 auto;
 }
+
+.darken {
+  min-height: 100vh;  
+  background-color: #232227;
+  color: var(--clr-light-gray);
+}
+
 .shadow-dark{
   box-shadow: var(--dark-shadow);
 }

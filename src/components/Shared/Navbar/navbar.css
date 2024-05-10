@@ -27,98 +27,30 @@
   }
 }
 
-/* sidebar */
-.sidebar{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top:0;
-  left: 0;
-  background-color: #fff;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  row-gap: 1rem;
-  transition: all 0.3s linear;
-  transform: translate(-100%);
+ul li{
+  background-color: none;
 }
-.show-sidebar{
-  transform: translate(0);
+ul li:hover{
+  background-color: none;
 }
 
-/* dropdown content */
-.sidebar-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:1rem 1.5rem;
+ul li a{
+  font-weight: 700;
+  font-size: 1rem;
+  outline: none; 
+  padding: 4px 8px;
+  background-color: none;
 }
-
-.sidebar-header img{
-  justify-self: center;
-  height: 40px;
+ul li Navlink.active, li a.active:hover,  li:hover{
+  /* font-weight: bold; */
+  border-radius: 2px;
+  color:var(--clr-accent);
+  text-decoration: underline;
+  background: transparent;
+  color: #7C3AED;
 }
-.sidebar-header button{
-  font-size: 1.75rem;
-  background: transparent ;
-  border: none;
-  color:var(--clr-primary);
-}
-.sidebar-header button i{
-  transition: all 0.3s linear;
-}
-.sidebar-header button i:hover{
-  transform: rotate(90deg);
-  color:red;
-}
-
-/* Side bar Links */
-.sidebar-links{
-  list-style-type: none;
-  font-size: 1.25rem;
-  font-family: var(--font-secondary);
-}
-.sidebar-links li{
-  margin-top: 1rem;
-  width:100%;
-  padding:1rem 1.5rem;
-}
-.sidebar-links li:hover{
-  background-color: var(--clr-focused);
-  cursor: pointer;
-}
-.sidebar-links li:hover a{
-  color:var(--clr-primary);
-}
-.sidebar-links li a{
-  color:var(--clr-secondary);
-  text-decoration: none;
-}
-
-/* sidebar-social */
-.sidebar-social{
-  list-style-type: none;
-  display: flex;
-  gap:1rem;
-  justify-content: center;
-  padding: 2rem 3rem;
-}
-
-.sidebar i{
-  font-size: 1.5rem;
-  color:var(--clr-focused);
-}
-.sidebar i:hover{
-  color:#063251;
-
-}
-
-
-
-@media screen and (min-width:676px) {
-  body{
-    font-size: 16px;
-  }
-  .sidebar{
-    width: 400px;
-  }
+ul:hover a.active{
+  background: transparent;
+  color: var(--clr-primary);
+  text-decoration:none;
 }

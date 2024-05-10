@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
@@ -20,6 +20,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+ 
 
     emailPasswordLogin(email, password)
     .then(result => {
@@ -30,6 +31,7 @@ const Login = () => {
         title: "Login Successful",
         timer: 2500,
       });
+     
     })
     .catch(error => {
       if (error.code === "auth/invalid-credential") {
