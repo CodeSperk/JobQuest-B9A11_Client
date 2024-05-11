@@ -1,56 +1,23 @@
-/* dropdown btn */
-.toggle-btn{
-  color: var(--clr-focused);
-  position: fixed;
-  top: 2rem;
-  right: 3rem;
-  font-size: 2rem;
-  color: var(--clr-focused);
-  background-color: transparent;
-  border-color: transparent;
-  transition: all 0.3s linear;
-  cursor: pointer;
-  animation: bounce 5s ease-in-out infinite;
-}
-.toggle-btn:hover{
-  color: var(--clr-focused-hover);
-}
-@keyframes bounce {
-  0%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(1.5);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-
 ul li{
-  background-color: none;
+  margin-bottom: 8px ;
 }
-ul li:hover{
-  background-color: none;
-}
-
 ul li a{
   font-weight: 700;
   font-size: 1rem;
-  outline: none; 
-  padding: 4px 8px;
-  background-color: none;
 }
-ul li Navlink.active, li a.active:hover,  li:hover{
-  /* font-weight: bold; */
-  border-radius: 2px;
-  color:var(--clr-accent);
+li:hover{
+  color:var(--clr-focused);
   text-decoration: underline;
-  background: transparent;
-  color: #7C3AED;
 }
-ul:hover a.active{
-  background: transparent;
-  color: var(--clr-primary);
-  text-decoration:none;
+
+.darken .dropdown-content{
+ background-color: var(--clr-dark);
+}
+
+
+@media screen and (min-width: 1024px) {
+  ul li{
+    margin-right: 12px ;
+  }
+
 }

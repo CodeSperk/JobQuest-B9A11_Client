@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const navLinks = <>
             <li>
-              <NavLink to="/" className="text-gray-800 hover:text-purple-600">Home</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/allJobs">All Jobs</NavLink>
@@ -44,8 +44,8 @@ const userName = user?.displayName? user.displayName : "No Name found";
 const userPhoto = user?.photoURL ? user.photoURL : "https://i.ibb.co/Vq2sG3c/fake-profile.webp" ;
 
   return (
-    <div className="flex items-center">
-    <nav className="border-b navbar max-w-[1440px] px-4 md:px-10 xl:px-14 mx-auto">
+    <nav className="navbar max-w-[1440px] px-4 md:px-10 xl:px-14 mx-auto">
+
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="text-3xl lg:hidden">
@@ -53,7 +53,7 @@ const userPhoto = user?.photoURL ? user.photoURL : "https://i.ibb.co/Vq2sG3c/fak
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm bg-[var(--clr-light)] dropdown-content z-[1] p-6 shadow rounded-box w-52"
           >
            {navLinks}
           </ul>
@@ -69,7 +69,7 @@ const userPhoto = user?.photoURL ? user.photoURL : "https://i.ibb.co/Vq2sG3c/fak
       {
         user? <div className="navbar-end">
         <div className="dropdown dropdown-hover">
-            <div tabIndex={0} className="w-11 h-11 border-2 border-[var(--clr-primary)] rounded-full cursor-pointer">
+            <div tabIndex={0} className="w-11 h-11 border-2 border-[var(--clr-focused)] rounded-full cursor-pointer">
               <img
                 src={userPhoto}
                 alt="User Photo"
@@ -93,7 +93,7 @@ const userPhoto = user?.photoURL ? user.photoURL : "https://i.ibb.co/Vq2sG3c/fak
       </div>  
       }
     </nav>
-    </div>
+   
   );
 };
 

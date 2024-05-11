@@ -59,15 +59,14 @@ const Register = () => {
     })
   }
 
-
   return (
     <div style={{ minHeight: 'calc(100vh - 90px)' }} className="w-full flex justify-center items-center py-12 lg:py-24">
-      <div className="w-96 md:w-[420px] border  p-8 space-y-3 rounded-xl bg-[var(--clr-light-gray)]">
+      <div className="card-style w-96 md:w-[420px] border  p-8 space-y-3 rounded-xl bg-[var(--clr-light-gray)]">
 
        <div className="text-center">
         <h1 className="text-2xl font-bold">Register</h1>
         <small className="">Hi, You are welcome</small>
-        {success? <h6 className="text-[var(--clr-primary)]">Registration successful,  Please Login Now</h6> : ""}
+        {success? <h6 className="text-[var(--clr-focused)]">Registration successful,  Please Login Now</h6> : ""}
        </div>
 
         <form onSubmit={handleRegister} className="space-y-6 text-sm">
@@ -81,7 +80,7 @@ const Register = () => {
               name="name"
              id="name"
               placeholder="Your name"
-              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-primary)]"
+              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
           </div>
           {/* email field */}
@@ -94,7 +93,7 @@ const Register = () => {
               name="email"
               id="email"
               placeholder="Your email"
-              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-primary)]"
+              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
           </div>
 
@@ -108,7 +107,7 @@ const Register = () => {
               name="photo"
              id="photo"
               placeholder="Your photo url"
-              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-primary)]"
+              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
           </div>
 
@@ -123,7 +122,7 @@ const Register = () => {
               name="password"
               id="password"
               placeholder="Your password"
-              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-primary)]"
+              className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
             <div
               className="absolute top-1/2 -translate-y-1/2 right-2 text-lg cursor-pointer"
@@ -137,7 +136,7 @@ const Register = () => {
           </div>
 
       
-          <button className="w-full bg-[var(--clr-primary)] text-[var(--clr-light-gray)] px-4 py-2.5 rounded-md hover:rounded-full duration-300 font-bold text-base mt-6">
+          <button className="w-full bg-[var(--clr-focused)] text-[var(--clr-light)] px-4 py-2.5 rounded-md hover:rounded-full duration-300 font-bold text-base mt-6">
               Sign up
         </button>
         </form>
@@ -145,7 +144,7 @@ const Register = () => {
         
         <p className="text-center text-sm flex justify-center gap-2 pt-2">
           Already Have an account? 
-         <Link to="/login" className="flex gap-1 text-[var(--clr-primary)] font-bold">
+         <Link to="/login" className="flex gap-1 text-[var(--clr-focused)] font-bold">
          Please Login <FiArrowUpRight />
          </Link>
         </p>
