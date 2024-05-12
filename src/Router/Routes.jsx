@@ -10,11 +10,13 @@ import MyJobs from '../components/Pages/MyJobs/MyJobs';
 import Blog from '../components/Pages/Blog/Blog';
 import PrivateRoute from './PrivateRoute';
 import JobDetails from '../components/Pages/JobDetails/JobDetails';
+import ErrorPage from '../components/Pages/Error/ErrorPage';
 
 const Routes = createBrowserRouter([
   {
     path:"/",
     element:<RootLayout />,
+    errorElement:<ErrorPage />,
     children:[
       {
         path:"/",
