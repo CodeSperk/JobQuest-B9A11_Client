@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
@@ -11,6 +11,8 @@ const Login = () => {
   const [showPass, setShowPass] = useState(false);
   const {emailPasswordLogin, googleLogin} = useContext(AuthContext);
   const [error, setError] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -29,15 +31,14 @@ const Login = () => {
         timer: 2500,
       });
      
+      navigate(location?.state? location.state : "/");
     })
     .catch(error => {
       if (error.code === "auth/invalid-credential") {
         setError("Provide valid email & password");
       }
     })
-  
   }
-
 
   const handleGoogleLogin = () => {
     googleLogin()
@@ -50,7 +51,7 @@ const Login = () => {
         timer: 2500,
       });
 
-      // navigate(location?.state ? location.state : "/");
+      navigate(location?.state? location.state : "/");
     })
     .catch(error => {
       console.log(error.code);
