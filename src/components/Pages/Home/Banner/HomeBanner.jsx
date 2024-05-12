@@ -7,7 +7,7 @@ const HomeBanner = () => {
           <p>Find your dream job today! Explore a wide range of opportunities tailored to your skills and preferences with JobQuest</p>
 
           <a href="#footer">
-              <button className="bg-[var(--clr-focused)] mt-6 px-8 py-2 lg:py-3 rounded-md text-[var(--clr-light-primary)] text-lg">
+              <button className="bg-[var(--clr-focused)] mt-6 px-8 py-2 lg:py-3 rounded-md text-[var(--clr-light-primary)] text-lg hover:scale-95 duration-300">
                 Find Job Now
               </button>
           </a>

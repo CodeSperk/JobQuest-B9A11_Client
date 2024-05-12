@@ -1,6 +1,8 @@
 [
   {
-    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "userName": "John Doe",
+    "userEmail": "john@example.com",
+    "companyLogo": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Software Engineer",
     "jobCategory": "Remote",
     "salaryRange": "$60,000 - $90,000",
@@ -10,7 +12,9 @@
     "jobApplicants": 0
   },
   {
-    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "userName": "Jane Smith",
+    "userEmail": "jane@example.com",
+    "companyLogo": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Data Analyst",
     "jobCategory": "Remote",
     "salaryRange": "$50,000 - $70,000",
@@ -20,7 +24,9 @@
     "jobApplicants": 0
   },
   {
-    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "userName": "Michael Johnson",
+    "userEmail": "michael@example.com",
+    "companyLogo": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Marketing Manager",
     "jobCategory": "On Site",
     "salaryRange": "$70,000 - $100,000",
@@ -30,7 +36,9 @@
     "jobApplicants": 0
   },
   {
-    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "userName": "Emily Brown",
+    "userEmail": "emily@example.com",
+    "companyLogo": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Graphic Designer",
     "jobCategory": "On Site",
     "salaryRange": "$30,000 - $50,000",
@@ -40,9 +48,11 @@
     "jobApplicants": 0
   },
   {
-    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "userName": "David Wilson",
+    "userEmail": "david@example.com",
+    "companyLogo": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Customer Support Representative",
-    "jobCategory": "Part-Time",
+    "jobCategory": "Hybrid",
     "salaryRange": "$25,000 - $35,000",
     "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
     "jobPostingDate": "2024-05-06",
@@ -50,9 +60,11 @@
     "jobApplicants": 0
   },
   {
-    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "userName": "Olivia Martinez",
+    "userEmail": "olivia@example.com",
+    "companyLogo": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Content Writer",
-    "jobCategory": "Part-Time",
+    "jobCategory": "Hybrid",
     "salaryRange": "$20,000 - $30,000",
     "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
     "jobPostingDate": "2024-05-05",
@@ -60,6 +72,8 @@
     "jobApplicants": 0
   },
   {
+    "userName": "Olivia Martinez",
+    "userEmail": "olivia@example.com",
     "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Software Engineer",
     "jobCategory": "Remote",
@@ -70,6 +84,8 @@
     "jobApplicants": 0
   },
   {
+    "userName": "Olivia Martinez",
+    "userEmail": "olivia@example.com",
     "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Data Analyst",
     "jobCategory": "Remote",
@@ -80,6 +96,8 @@
     "jobApplicants": 0
   },
   {
+    "userName": "Olivia Martinez",
+    "userEmail": "olivia@example.com",
     "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Marketing Manager",
     "jobCategory": "On Site",
@@ -90,6 +108,8 @@
     "jobApplicants": 0
   },
   {
+    "userName": "Olivia Martinez",
+    "userEmail": "olivia@example.com",
     "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Graphic Designer",
     "jobCategory": "On Site",
@@ -100,6 +120,8 @@
     "jobApplicants": 0
   },
   {
+    "userName": "Olivia Martinez",
+    "userEmail": "olivia@example.com",
     "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Frontend Developer",
     "jobCategory": "Part-Time",
@@ -110,6 +132,8 @@
     "jobApplicants": 0
   },
   {
+    "userName": "Olivia Martinez",
+    "userEmail": "olivia@example.com",
     "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
     "jobTitle": "Content Writer",
     "jobCategory": "Part-Time",
