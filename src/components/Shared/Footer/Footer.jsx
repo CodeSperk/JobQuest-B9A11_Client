@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <div className="">
       {/* Newsletter */}
-      <div className="flex flex-col md:flex-row items-center text-center lg:text-start gap-6 py-12 border-b">
+      <div className="flex flex-col md:flex-row items-center text-center md:text-start gap-6 py-12 border-b">
         <div className="lg:w-1/2 space-y-4">
-          <div className="w-36 h-auto mx-auto lg:mx-0 ">
+          <div className="w-36 h-auto mx-auto md:mx-0 ">
             <img src={logo} alt="" />
           </div>
           <p className="max-w-[420px] text-[var(--clr-light-secondary)]">

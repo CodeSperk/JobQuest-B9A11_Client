@@ -1,0 +1,122 @@
+[
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Software Engineer",
+    "jobCategory": "Remote",
+    "salaryRange": "$60,000 - $90,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-10",
+    "applicationDeadline": "2024-06-10",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Data Analyst",
+    "jobCategory": "Remote",
+    "salaryRange": "$50,000 - $70,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-09",
+    "applicationDeadline": "2024-06-09",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Marketing Manager",
+    "jobCategory": "On Site",
+    "salaryRange": "$70,000 - $100,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-08",
+    "applicationDeadline": "2024-06-08",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Graphic Designer",
+    "jobCategory": "On Site",
+    "salaryRange": "$30,000 - $50,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-07",
+    "applicationDeadline": "2024-06-07",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Customer Support Representative",
+    "jobCategory": "Part-Time",
+    "salaryRange": "$25,000 - $35,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-06",
+    "applicationDeadline": "2024-06-06",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Content Writer",
+    "jobCategory": "Part-Time",
+    "salaryRange": "$20,000 - $30,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-05",
+    "applicationDeadline": "2024-06-05",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Software Engineer",
+    "jobCategory": "Remote",
+    "salaryRange": "$60,000 - $90,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-10",
+    "applicationDeadline": "2024-06-10",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Data Analyst",
+    "jobCategory": "Remote",
+    "salaryRange": "$50,000 - $70,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-09",
+    "applicationDeadline": "2024-06-09",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Marketing Manager",
+    "jobCategory": "On Site",
+    "salaryRange": "$70,000 - $100,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-08",
+    "applicationDeadline": "2024-06-08",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Graphic Designer",
+    "jobCategory": "On Site",
+    "salaryRange": "$30,000 - $50,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-07",
+    "applicationDeadline": "2024-06-07",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Frontend Developer",
+    "jobCategory": "Part-Time",
+    "salaryRange": "$40,000 - $60,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-06",
+    "applicationDeadline": "2024-06-06",
+    "jobApplicants": 0
+  },
+  {
+    "pictureURL": "https://i.ibb.co/TvD9w5T/photo-1542744173-8e7e53415bb0.jpg",
+    "jobTitle": "Content Writer",
+    "jobCategory": "Part-Time",
+    "salaryRange": "$25,000 - $40,000",
+    "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tempor enim. Donec viverra felis nisl, sit amet consequat risus dapibus et.",
+    "jobPostingDate": "2024-05-05",
+    "applicationDeadline": "2024-06-05",
+    "jobApplicants": 0
+  }
+]
