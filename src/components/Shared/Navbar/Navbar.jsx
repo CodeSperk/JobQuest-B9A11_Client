@@ -11,10 +11,9 @@ const Navbar = () => {
 
   const handleLogout = () => {
       logOutUser()
-      .then(()=> {})
+      .then(()=> { })
       .catch(error => console.log(error.code))
   }
-
   const navLinks = <>
             <li>
               <NavLink to="/">Home</NavLink>
