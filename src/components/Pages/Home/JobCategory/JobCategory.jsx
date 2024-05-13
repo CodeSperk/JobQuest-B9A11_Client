@@ -14,7 +14,7 @@ import { AuthContext } from "../../../../Provider/AuthProvider";
 const JobCategory = ({ jobs }) => {
   const {user} = useContext(AuthContext);
   const [targetedJobs, setTargetedJobs] = useState(jobs);
-  const categories = ["All", "On Site", "Hybrid", "Part Time", "Remote"];
+  const categories = ["All", "On Site", "Hybrid", "Part-Time", "Remote"];
 
   const handleJobCategory = (category) => {
     if (category === "All") {

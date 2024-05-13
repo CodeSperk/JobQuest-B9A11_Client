@@ -11,12 +11,10 @@
   --clr-light-primary:#efeef2;
   --clr-light-secondary:#aba8a8;
 
-  --bg-dark: #100f0f;
-
-  
+  --bg-dark: #16191c;
 
   --clr-light:#f8f8f8;
-  --clr-dark: #0c0117;
+  --clr-dark: #1d2227;
 }
 
 :root {
@@ -52,6 +50,9 @@ body {
 .darken .card-style{
   background: var(--clr-dark);
   border: 1px solid #878383;
+}
+.darken input, .darken select, .darken textarea{
+  color:var(--bg-dark);
 }
 
 nav-light-bg{
