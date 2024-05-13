@@ -7,6 +7,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import PropTypes from 'prop-types';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const JobCategory = ({jobs}) => {
   const [targetedJobs, setTargetedJobs] =useState(jobs);
@@ -56,7 +57,9 @@ const JobCategory = ({jobs}) => {
               </div>
               <div>
                 <div>
+                  <Link to={`/job/${job._id}`}>
                   <button className="bg-[var(--clr-focused-light)] px-4 py-1.5 rounded font-bold text-[var(--clr-focused)] hover:scale-95 duration-300">View Details</button>
+                  </Link>
                 </div>
               </div>
             </div>)
