@@ -62,18 +62,6 @@ const UpdateJob = () => {
       jobDescription,
       applicationDeadline,
     };
-    // console.log(newJob);
-    // fetch(`http://localhost:5000/jobs/${job._id}`, {
-    //   method: "PUT",
-    //   headers:{
-    //     'content-type': 'application/json'
-    //   },
-    //   body: JSON.stringify(newJob)
-    // })
-    // .then(res => res.json())
-    // .then(data=>{
-    //   console.log(data);
-    // })
 
     axiosSecure.put(`/jobs/${job._id}`, newJob)
     .then(res => {

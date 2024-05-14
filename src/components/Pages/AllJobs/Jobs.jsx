@@ -92,7 +92,7 @@ const Jobs = () => {
             </thead>
 
             <tbody>
-                {currentJobs.map(job => <tr key={job._id} className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50">
+                {currentJobs.map(job => <tr key={job._id} className="border-b border-opacity-20">
                   <td className="p-3 font-bold">
                   <p>{job.jobTitle}</p>
                 </td>
