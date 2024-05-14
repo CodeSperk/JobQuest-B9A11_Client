@@ -54,6 +54,9 @@ body {
 .darken input, .darken select, .darken textarea{
   color:var(--bg-dark);
 }
+.darken input.submit{
+  color:var(--clr-light);
+}
 
 nav-light-bg{
   background: var(--bg-light);

@@ -79,6 +79,7 @@ const Register = () => {
              type="text"
               name="name"
              id="name"
+             required
               placeholder="Your name"
               className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
@@ -92,6 +93,7 @@ const Register = () => {
               type="email"
               name="email"
               id="email"
+              required
               placeholder="Your email"
               className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
@@ -121,6 +123,7 @@ const Register = () => {
               type={showPass? "password" : "text"}
               name="password"
               id="password"
+              required
               placeholder="Your password"
               className="w-full px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
