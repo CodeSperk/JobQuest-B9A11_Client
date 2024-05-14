@@ -11,6 +11,7 @@ import Blog from '../components/Pages/Blog/Blog';
 import PrivateRoute from './PrivateRoute';
 import JobDetails from '../components/Pages/JobDetails/JobDetails';
 import ErrorPage from '../components/Pages/Error/ErrorPage';
+import UpdateJob from '../components/Pages/updateJob/UpdateJob';
 
 const Routes = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const Routes = createBrowserRouter([
         element: <PrivateRoute><AppliedJobs></AppliedJobs></PrivateRoute>
       },
       {
+        path: "/job/:id",
+        element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>
+      },
+      {
         path:"/addJobs",
         element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
       },
@@ -47,8 +52,8 @@ const Routes = createBrowserRouter([
         element:<PrivateRoute><MyJobs></MyJobs></PrivateRoute>
       },
       {
-        path: "/job/:id",
-        element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>
+        path:"/update/:id",
+        element:<PrivateRoute><UpdateJob></UpdateJob></PrivateRoute>
       },
       {
         path:"/blogs",
