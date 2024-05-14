@@ -5,7 +5,6 @@ import JobCategory from "./JobCategory/JobCategory";
 
 const Home = () => {
   const axiosSecure = useAxios();
-
   const {isPending, data: jobs} = useQuery({
     queryKey: ['jobs'],
     queryFn: async () => {
@@ -13,6 +12,8 @@ const Home = () => {
       return data.data;
     }
   });
+
+
   if(isPending){
     return <span className="loading loading-bars loading-lg text-[var(--clr-focused)]"></span>
   }

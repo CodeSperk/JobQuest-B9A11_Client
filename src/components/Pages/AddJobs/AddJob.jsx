@@ -48,9 +48,7 @@ const AddJob = () => {
         form.reset();
       }
     })
-    
   };
-
 
   return (
     <div style={{ minHeight: "calc(100vh - 90px)" }} className="py-12 lg:py-24">
