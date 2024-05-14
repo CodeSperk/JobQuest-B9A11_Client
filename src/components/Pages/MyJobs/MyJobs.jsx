@@ -14,7 +14,7 @@ const MyJobs = () => {
   const { isPending, data: jobs } = useQuery({
     queryKey: ["myJobs"],
     queryFn: async () => {
-      const data = await axiosSecure.get(`myJobs?email=${user?.email}`);
+      const data = await axiosSecure.get(`/myJobs?email=${user?.email}`);
       return data.data;
     },
   });
