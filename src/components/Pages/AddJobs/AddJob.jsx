@@ -5,13 +5,12 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useAxios from "../../../Hooks/useAxios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddJob = () => {
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [date, setDate] = useState(new Date());
   const axiosSecure = useAxios();
-
-  
 
   const handleAddJob = (e) => {
     e.preventDefault();
@@ -24,20 +23,35 @@ const AddJob = () => {
     const jobCategory = form.jobCategory.value;
     const salaryFrom = form.salaryFrom.value;
     const salaryTo = form.salaryTo.value;
-    const salaryRange =`$${salaryFrom} - $${salaryTo}`;
+    const salaryRange = `$${salaryFrom} - $${salaryTo}`;
     const jobDescription = form.jobDescription.value;
-    const jobPostingDate = form.jobPostingDate.value;  
+    const jobPostingDate = form.jobPostingDate.value;
     const applicationDeadline = form.applicationDeadline.value;
     const jobApplicants = form.jobApplicants.value;
-    const requirements = ["Graduation in the related field", "Freshers are welcome" ]
+    const requirements = [
+      "Graduation in the related field",
+      "Freshers are welcome",
+    ];
 
-    const newJob = {pictureURL, userName, userEmail, companyLogo, jobTitle, jobCategory, salaryRange, jobDescription, jobPostingDate, applicationDeadline, jobApplicants, requirements};
+    const newJob = {
+      pictureURL,
+      userName,
+      userEmail,
+      companyLogo,
+      jobTitle,
+      jobCategory,
+      salaryRange,
+      jobDescription,
+      jobPostingDate,
+      applicationDeadline,
+      jobApplicants,
+      requirements,
+    };
     console.log(newJob);
 
-    axiosSecure.post('/jobs', newJob)
-    .then(res => {
+    axiosSecure.post("/jobs", newJob).then((res) => {
       const data = res.data;
-      if(data.insertedId){
+      if (data.insertedId) {
         Swal.fire({
           icon: "success",
           iconColor: "#7C3AED",
@@ -47,11 +61,14 @@ const AddJob = () => {
         });
         form.reset();
       }
-    })
+    });
   };
 
   return (
     <div style={{ minHeight: "calc(100vh - 90px)" }} className="py-12 lg:py-24">
+      <Helmet>
+        <title>JobQuest | Add Job </title>
+      </Helmet>
       <div className="card-style w-full max-w-4xl mx-auto px-4 md:px-8 lg:px-16 py-12 lg:py-16 space-y-3 rounded-xl">
         <div className="text-center space-y-2">
           <h1 className="font-bold">Post New Job</h1>
@@ -155,7 +172,7 @@ const AddJob = () => {
           {/* Application Deadline */}
           <div className="flex flex-col md:flex-row md:items-center gap-4">
             <label className="text-base font-bold w-28">Deadline:</label>
-           
+
             <DatePicker
               selected={date}
               onChange={(date) => setDate(date)}
@@ -163,10 +180,7 @@ const AddJob = () => {
               name="applicationDeadline"
               className="flex-grow px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
             />
-           
           </div>
-
-        
 
           {/* JobTitle Field */}
           <div className="flex flex-col md:flex-row md:items-center gap-4">
@@ -213,22 +227,28 @@ const AddJob = () => {
             </div>
           </div>
 
-            {/* JobDescription Field */}
-            <div className="flex flex-col md:flex-row md:items-center gap-4">
+          {/* JobDescription Field */}
+          <div className="flex flex-col md:flex-row md:items-center gap-4">
             <label className="text-base font-bold w-28">Description</label>
-            <textarea name="jobDescription" id="" rows={4} placeholder="Write your job description here"
-            className="flex-1 px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"></textarea>
+            <textarea
+              name="jobDescription"
+              id=""
+              rows={4}
+              placeholder="Write your job description here"
+              className="flex-1 px-4 py-3 rounded-md border focus:outline-[var(--clr-focused)]"
+            ></textarea>
           </div>
 
           <div className="text-center md:ml-32">
-          <input type="submit" className="submit w-full bg-[var(--clr-focused)] text-[var(--clr-light)] px-12 py-4 rounded-md hover:rounded-full duration-300 font-bold text-base cursor-pointer" value="Submit Job"/>
+            <input
+              type="submit"
+              className="submit w-full bg-[var(--clr-focused)] text-[var(--clr-light)] px-12 py-4 rounded-md hover:rounded-full duration-300 font-bold text-base cursor-pointer"
+              value="Submit Job"
+            />
           </div>
         </form>
       </div>
-
-  
-   
-</div>
+    </div>
   );
 };
 

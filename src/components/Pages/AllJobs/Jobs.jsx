@@ -5,6 +5,7 @@ import { GoSearch } from "react-icons/go";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Jobs = () => {
   const axiosSecure = useAxios();
@@ -50,8 +51,12 @@ const Jobs = () => {
 
   return (
     <div>
+            <Helmet>
+      <title>JobQuest | All Jobs </title>
+      </Helmet>
       {/* Banner/ Title */}
       <div className="card-style px-4 md:px-10 lg:pl-20 rounded-xl py-16 flex justify-center items-center">
+
         <div className="text-center">
           <h1 className="mb-4">
             Get The <span className="text-[var(--clr-focused)]">Right Job</span>
