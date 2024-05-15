@@ -4,11 +4,11 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import useAxios from "../../../Hooks/useAxios";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import { Document, Page, Text, View, StyleSheet, PDFViewer } from '@react-pdf/renderer';
 import { useRef } from 'react';
 
 const AppliedJobs = () => {
   const { user } = useContext(AuthContext);
-  const targetRef = useRef();
   const axiosSecure = useAxios();
   const [jobs, setJobs] = useState([]);
 
@@ -19,8 +19,25 @@ const AppliedJobs = () => {
       setJobs(data.data);
       return data.data;
     },
-  });  
+  });
 
+  const MyDocument = () => (
+    <Document>
+      <Page style={styles.page}>
+        <View style={styles.section}>
+          <Text>Applied Jobs Summary</Text>
+          {jobs.map(job => (
+            <View key={job._id} style={styles.jobContainer}>
+              <Text>{job.jobTitle}</Text>
+              <Text>{job.jobCategory}</Text>
+              <Text>{job.salaryRange}</Text>
+              {/* Add more fields as needed */}
+            </View>
+          ))}
+        </View>
+      </Page>
+    </Document>
+  );
 
   //to display loader while data is loading
   if (isPending) {
@@ -36,10 +53,23 @@ const AppliedJobs = () => {
       return;
     }
     const filteredJobs = appliedJobs.filter(job => job.jobCategory.toLowerCase().includes(searchedCategory.toLocaleLowerCase()));
-      setJobs(filteredJobs);
-  }
+    setJobs(filteredJobs);
+  };
 
-
+  const styles = StyleSheet.create({
+    page: {
+      flexDirection: 'row',
+      backgroundColor: '#E4E4E4'
+    },
+    section: {
+      margin: 10,
+      padding: 10,
+      flexGrow: 1
+    },
+    jobContainer: {
+      marginBottom: 10
+    }
+  });
 
   return (
     <div>
@@ -51,32 +81,25 @@ const AppliedJobs = () => {
       <div className="card-style px-4 md:px-10 lg:pl-20 rounded-xl py-16 flex justify-center items-center">
         <div className="text-center">
           <h1 className="mb-4">
-             <span className="text-[var(--clr-focused)]">Your Applied Jobs</span>
+            <span className="text-[var(--clr-focused)]">Your Applied Jobs</span>
             <br />  Explore Your Professional Journey
           </h1>
 
           <div className="relative flex items-center justify-center ">
-          <select value={""} onChange={handleAppliedJobs} className="px-8 py-2 rounded-lg outline-none">
-        <option value="">Select Category</option>
-        <option value="all">All Categories</option>
-        <option value="Remote">Remote</option>
-        <option value="Part-time">Part-time</option>
-        <option value="On Site">On Site</option>
-        <option value="Hybrid">Hybrid</option>
-        {/* Add more options based on your job categories */}
-      </select>
+            <select value={""} onChange={handleAppliedJobs} className="px-8 py-2 rounded-lg outline-none">
+              <option value="">Select Category</option>
+              <option value="all">All Categories</option>
+              <option value="Remote">Remote</option>
+              <option value="Part-time">Part-time</option>
+              <option value="On Site">On Site</option>
+              <option value="Hybrid">Hybrid</option>
+              {/* Add more options based on your job categories */}
+            </select>
           </div>
         </div>
       </div>
 
-      <button onClick={() => generatePDF(targetRef, {filename: 'page.pdf'})} className="px-3 py-2 rounded text-white bg-red-500">Download PDF</button>
-
-      <div ref={targetRef} className="min-w-5xl bg-red-100 h-80">
-        Hello there
-      </div>
-
-       {/* Tabular Form */}
-       <div className="p-2 mx-auto sm:p-4 mt-8 min-h-96">
+      <div className="p-2 mx-auto sm:p-4 mt-8 min-h-96">
         <div className="overflow-x-auto">
           <table className="min-w-full">
             <thead className="">
@@ -88,35 +111,38 @@ const AppliedJobs = () => {
                 <th className="p-3">View Details</th>
               </tr>
             </thead>
-
             <tbody>
-                {jobs.map(job => <tr key={job?._id} className="border-b border-opacity-20">
+              {jobs.map(job => (
+                <tr key={job._id} className="border-b border-opacity-20">
                   <td className="p-3">
                     <img src={job?.pictureURL} alt="" className="h-16 w-auto"/>
-                </td>
+                  </td>
                   <td className="p-3">
-                  <p>{job?.jobTitle}</p>
-                </td>
+                    <p>{job?.jobTitle}</p>
+                  </td>
                   <td className="p-3">
-                  <p>{job?.jobCategory}</p>
-                </td>
+                    <p>{job?.jobCategory}</p>
+                  </td>
                   <td className="p-3">
-                  <p>{job?.salaryRange}</p>
-                </td>
-                <td className="p-3">
-                  <Link to={`/job/${job?._id}`}>
-                  <button className="px-3 py-1 font-semibold rounded-md bg-[var(--clr-focused)] text-[var(--clr-light)]">
-                    Details
-                  </button>                  
-                  </Link>
-                </td>
-                </tr>)}
+                    <p>{job?.salaryRange}</p>
+                  </td>
+                  <td className="p-3">
+                    <Link to={`/job/${job?._id}`}>
+                      <button className="px-3 py-1 font-semibold rounded-md bg-[var(--clr-focused)] text-[var(--clr-light)]">
+                        Details
+                      </button>                  
+                    </Link>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </div>
 
-      
+      <PDFViewer width="1000" height="600">
+        <MyDocument />
+      </PDFViewer>     
 
     </div>
   );

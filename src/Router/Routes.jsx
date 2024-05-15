@@ -12,6 +12,7 @@ import PrivateRoute from './PrivateRoute';
 import JobDetails from '../components/Pages/JobDetails/JobDetails';
 import ErrorPage from '../components/Pages/Error/ErrorPage';
 import UpdateJob from '../components/Pages/updateJob/UpdateJob';
+import Trial from '../components/Pages/AppliedJobs/Trial';
 
 const Routes = createBrowserRouter([
   {
@@ -58,6 +59,9 @@ const Routes = createBrowserRouter([
       {
         path:"/blogs",
         element: <Blog></Blog>
+      },{
+        path:"/trial",
+        element:<Trial></Trial>
       }
     ]
   }
