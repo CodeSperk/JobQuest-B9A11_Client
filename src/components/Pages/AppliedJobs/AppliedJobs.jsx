@@ -4,9 +4,11 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import useAxios from "../../../Hooks/useAxios";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import { useRef } from 'react';
 
 const AppliedJobs = () => {
   const { user } = useContext(AuthContext);
+  const targetRef = useRef();
   const axiosSecure = useAxios();
   const [jobs, setJobs] = useState([]);
 
@@ -37,6 +39,8 @@ const AppliedJobs = () => {
       setJobs(filteredJobs);
   }
 
+
+
   return (
     <div>
       <Helmet>
@@ -63,6 +67,12 @@ const AppliedJobs = () => {
       </select>
           </div>
         </div>
+      </div>
+
+      <button onClick={() => generatePDF(targetRef, {filename: 'page.pdf'})} className="px-3 py-2 rounded text-white bg-red-500">Download PDF</button>
+
+      <div ref={targetRef} className="min-w-5xl bg-red-100 h-80">
+        Hello there
       </div>
 
        {/* Tabular Form */}
@@ -106,7 +116,7 @@ const AppliedJobs = () => {
         </div>
       </div>
 
-
+      
 
     </div>
   );
