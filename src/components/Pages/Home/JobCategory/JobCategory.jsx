@@ -108,7 +108,9 @@ const JobCategory = ({ jobs }) => {
               Fill vacancies fast! Post your job now and connect with top talent
               on JobQuest
             </p>
+            <Link to="/addJobs">
             <Button2 text="Post a job"></Button2>
+            </Link>
           </div>
 
           {/* Our Featured Companies */}
@@ -117,19 +119,19 @@ const JobCategory = ({ jobs }) => {
             <div className="space-y-4">
               {/* Microsoft */}
               <div className="flex items-center gap-2 hover:text-[var(--clr-focused)] cursor-pointer pr-4 hover:pr-0">
-                <BsMicrosoft className="p-2 text-5xl bg-[var(--clr-light)] border-2 rounded-md" />
+                <BsMicrosoft className="p-2 text-5xl bg-[var(--clr-light)] border-2 rounded-md text-[var(--clr-focused)]" />
                 <p className="flex-1">Microsoft</p>{" "}
                 <FaLongArrowAltRight className="text-2xl" />
               </div>
               {/* google */}
-              <div className="flex items-center gap-2 hover:text-[var(--clr-focused)] cursor-pointer pr-4 hover:pr-0">
-                <BsGoogle className="p-2 text-5xl bg-[var(--clr-light)] border-2 rounded-md" />
+              <div className="flex items-center gap-2 hover:text-[var(--clr-focused)] cursor-pointer pr-4 hover:pr-0 ">
+                <BsGoogle className="p-2 text-5xl bg-[var(--clr-light)] border-2 rounded-md text-[var(--clr-focused)]" />
                 <p className="flex-1">Google</p>{" "}
                 <FaLongArrowAltRight className="text-2xl" />
               </div>
               {/* Facebook */}
-              <div className="flex items-center gap-2 hover:text-[var(--clr-focused)] cursor-pointer pr-4 hover:pr-0">
-                <BsFacebook className="p-2 text-5xl bg-[var(--clr-light)] border-2 rounded-md" />
+              <div className="flex items-center gap-2 hover:text-[var(--clr-focused)] cursor-pointer pr-4 hover:pr-0 ">
+                <BsFacebook className="p-2 text-5xl bg-[var(--clr-light)] border-2 rounded-md text-[var(--clr-focused)]" />
                 <p className="flex-1">Facebook</p>{" "}
                 <FaLongArrowAltRight className="text-2xl" />
               </div>

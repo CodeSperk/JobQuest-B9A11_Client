@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxios from "../../../Hooks/useAxios";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { GoSearch } from "react-icons/go";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
