@@ -18,7 +18,7 @@ const Blog = () => {
       </div>
 
       {/* Blogs */}
-      <section className="space-y-10">
+      <section className="space-y-10 max-w-5xl mx-auto">
         {/* Blog-1 Access & Refresh Token*/}
         <div className="border-2 px-4 md:px-8 lg:px-12 rounded-lg py-10">
           <p className="font-bold text-2xl mb-8">
