@@ -68,7 +68,7 @@ const JobDetails = () => {
           icon: "success",
           iconColor: "#2D2F81",
           confirmButtonColor: "#2D2F81",
-          title: "Job Updated Successfully",
+          title: "Applied Successful",
           timer: 2500
         });
       }

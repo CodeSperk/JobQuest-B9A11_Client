@@ -11,6 +11,7 @@ const AuthProvider = ({children}) => {
   const [loading, setLoading] = useState(true);
   const [darkTheme, setDarkTheme] = useState(false);
 
+
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
