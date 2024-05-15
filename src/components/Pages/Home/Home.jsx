@@ -4,6 +4,7 @@ import HomeBanner from "./Banner/HomeBanner";
 import JobCategory from "./JobCategory/JobCategory";
 import { Helmet } from "react-helmet-async";
 import TopCompanies from "./TopCompanies/TopCompanies";
+import JobService from "./jobService/JobService";
 
 const Home = () => {
   const axiosSecure = useAxios();
@@ -30,6 +31,10 @@ const Home = () => {
       <HomeBanner></HomeBanner>
 
       <main>
+        {/* Service Section */}
+        <JobService></JobService>
+
+
         {/* Job Category Section */}
         <JobCategory jobs={jobs} id="jobs"></JobCategory>
 
