@@ -22,7 +22,7 @@ const AppliedJobs = () => {
   });
 
   const MyDocument = () => (
-    <Document>
+    <Document className="mx-auto">
       <Page style={styles.page}>
         <View style={styles.section}>
           <Text>Applied Jobs Summary</Text>

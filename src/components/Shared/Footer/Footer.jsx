@@ -17,7 +17,7 @@ const Footer = () => {
             Directly to Your Inbox Every Week!
           </p>
         </div>
-        <div className="relative w-[420px] lg:w-1/2">
+        <div className="relative w-[300px] lg:w-1/2">
           <input
             type="email"
             placeholder="xyz@gmail.com"
