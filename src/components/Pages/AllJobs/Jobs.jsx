@@ -8,33 +8,32 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
 const Jobs = () => {
+  const {user} = useContext(AuthContext);
   const axiosSecure = useAxios();
+  const [currentJobs, setCurrentJobs ] = useState([]);
+
   const {isPending, data: allJobs} = useQuery({
     queryKey: ['jobs'],
     queryFn: async () => {
       const data = await axiosSecure.get("/jobs");
+      setCurrentJobs(data.data);
       return data.data;
     }
   });
-  const [currentJobs, setCurrentJobs ] = useState([]);
-  const {user} = useContext(AuthContext);
 
-
-  useEffect(() => {
-    if(allJobs){
-      setCurrentJobs(allJobs)
-    }
-  },[allJobs]);
-
-
+// to display loading spinner while loading 
   if(isPending){
     return <span className="loading loading-bars loading-lg text-[var(--clr-focused)]"></span>
   }
 
   const handleJobSearch =  (e) => {
-      const searchQuery = e.target.value;
+      const searchQuery = e.target.value.toLowerCase();
+      if(searchQuery === ""){
+        setCurrentJobs(allJobs);
+        return;
+      }
 
-      const filteredJobs = allJobs.filter(job => job.jobTitle.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
+      const filteredJobs = allJobs.filter(job => job.jobTitle.toLowerCase().includes(searchQuery));
       setCurrentJobs(filteredJobs);
   }
 
@@ -77,7 +76,7 @@ const Jobs = () => {
       </div>
 
       {/* Tabular Form */}
-      <div className="p-2 mx-auto sm:p-4">
+      <div className="p-2 mx-auto sm:p-4 mt-8">
         <div className="overflow-x-auto">
           <table className="min-w-full">
             

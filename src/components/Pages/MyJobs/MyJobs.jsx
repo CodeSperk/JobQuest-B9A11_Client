@@ -11,14 +11,16 @@ import { Link } from "react-router-dom";
 const MyJobs = () => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxios();
+  const [myJobs, setMyJobs] = useState([]);
+
   const { isPending, data: jobs } = useQuery({
     queryKey: ["myJobs"],
     queryFn: async () => {
       const data = await axiosSecure.get(`/myJobs?email=${user?.email}`);
+      setMyJobs(data.data)
       return data.data;
     },
   });
-  const [myJobs, setMyJobs] = useState(jobs);
 
   //to display loader while data is loading
   if (isPending) {

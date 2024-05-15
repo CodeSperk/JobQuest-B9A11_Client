@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import HomeBanner from "./Banner/HomeBanner";
 import JobCategory from "./JobCategory/JobCategory";
 import { Helmet } from "react-helmet-async";
+import TopCompanies from "./TopCompanies/TopCompanies";
 
 const Home = () => {
   const axiosSecure = useAxios();
@@ -28,9 +29,12 @@ const Home = () => {
       {/* Banner Page */}
       <HomeBanner></HomeBanner>
 
-      <main className="space-y-6">
+      <main>
         {/* Job Category Section */}
         <JobCategory jobs={jobs} id="jobs"></JobCategory>
+
+        {/* Top Companies Section */}
+        <TopCompanies></TopCompanies>
       </main>
     </div>
   );

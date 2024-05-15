@@ -9,6 +9,7 @@ const AppliedJobs = () => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxios();
   const [jobs, setJobs] = useState([]);
+
   const { isPending, data: appliedJobs } = useQuery({
     queryKey: ["appliedJobs"],
     queryFn: async () => {
@@ -25,7 +26,6 @@ const AppliedJobs = () => {
       <span className="loading loading-bars loading-lg text-[var(--clr-focused)]"></span>
     );
   }
-  console.log(appliedJobs);
 
   const handleAppliedJobs = (event) => {
     const searchedCategory = event.target.value;
