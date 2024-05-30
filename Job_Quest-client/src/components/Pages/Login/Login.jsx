@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import useAxios from "../../../Hooks/useAxios";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
@@ -13,6 +14,7 @@ const Login = () => {
   const [error, setError] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
+  const axiosSecure = useAxios();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -43,6 +45,14 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleLogin()
       .then((result) => {
+        const userInfo = {
+        name: result.user?.displayName,
+        email: result.user?.email,
+        role:"user"
+      }
+      axiosSecure.post("/users", userInfo)
+      .then(res => {
+        console.log(res.data);
         Swal.fire({
           icon: "success",
           iconColor: "#7C3AED",
@@ -50,9 +60,9 @@ const Login = () => {
           title: "Login Successful",
           timer: 2500,
         });
-
         navigate(location?.state ? location.state : "/");
-      })
+      });
+    })
       .catch((error) => {
         console.log(error.code);
       });

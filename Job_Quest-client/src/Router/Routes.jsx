@@ -13,6 +13,9 @@ import JobDetails from '../components/Pages/JobDetails/JobDetails';
 import ErrorPage from '../components/Pages/Error/ErrorPage';
 import UpdateJob from '../components/Pages/updateJob/UpdateJob';
 import Trial from '../components/Pages/AppliedJobs/Trial';
+import AdminDashboard from '../components/Pages/Dashboard/AdminDashboard/AdminDashboard';
+import DashboardLayout from '../Layouts/DashboardLayout';
+import Users from '../components/Pages/Dashboard/Users/Users';
 
 const Routes = createBrowserRouter([
   {
@@ -62,6 +65,20 @@ const Routes = createBrowserRouter([
       },{
         path:"/trial",
         element:<Trial></Trial>
+      }
+    ]
+  },
+  {
+    path:"/dashboard",
+    element:<DashboardLayout></DashboardLayout>,
+    children:[
+      {
+        path:"/dashboard",
+        element:<AdminDashboard></AdminDashboard>
+      },
+      {
+        path:"users",
+        element:<Users></Users>
       }
     ]
   }

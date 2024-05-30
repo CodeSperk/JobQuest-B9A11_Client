@@ -5,23 +5,25 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { Helmet } from "react-helmet-async";
+import useAxios from "../../../Hooks/useAxios";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const { createUser, logOutUser } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
+  const axiosSecure = useAxios();
 
   // To register with email and password
   const handleRegister = (e) => {
     e.preventDefault();
     setError(null);
-
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const photo = form.photo.value;
     const password = form.password.value;
+  
 
     // to validate password
     if (!/^(?=.*[0-9])(?=.*[A-Z])(?=.*\W)(?!.* )/.test(password)) {
@@ -41,10 +43,17 @@ const Register = () => {
         })
           .then()
           .catch((error) => console.log(error.code));
-
-        // alert
-        setSuccess(true);
-
+        
+        // to store users info in the data base
+        const usersInfo = {
+          name,
+         email,
+         role: "user"
+        }
+        axiosSecure.post("/users", usersInfo).then((res) => {
+          if (res.data.insertedId) {
+            // alert
+            setSuccess(true);
         //to prevent auto login
         logOutUser()
           .then()
@@ -52,6 +61,8 @@ const Register = () => {
 
         //to clear form and navigate after success
         form.reset();
+          }
+        });
       })
       .catch((error) => {
         if (error.code === "auth/email-already-in-use") {
